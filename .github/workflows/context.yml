@@ -1,0 +1,9 @@
+name: Context-workflow-actor
+on: push
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "The actor is ${{ github.actor }}"
+            - run: echo "The repository is ${{ github.repository }}"
+            - run: echo "The repository owner is ${{ github.repository_owner }}"
