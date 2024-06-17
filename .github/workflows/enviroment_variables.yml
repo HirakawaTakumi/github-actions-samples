@@ -7,6 +7,10 @@ jobs:
             BRANCH: main
         steps:
             - run: echo "The branch is ${BRANCH}"
+            # 変数のオーバーライド
+            - env:
+                BRANCH: develop
+              run: echo "The branch is ${BRANCH}"
             - uses: actions/checkout@v4
               with:
                     ref: ${{ env.BRANCH }}
