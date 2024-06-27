@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - main
+        # python/test_project/以下にあるすべてのpyファイルを対象にする
+        paths: [python/test_project/**.py]
     pull_request:
         branches:
             - main
