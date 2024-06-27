@@ -1,0 +1,26 @@
+name: python test
+run-name: python test run by ${{github.actor}}
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+jobs:
+    python-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Set up Python 3.9
+              uses: actions/seeup-python@v5
+              with:
+                  python-version: 3.9
+                  cache: pip
+            - name: Install dependencies
+              run: |
+                 python -m pip install --upgrade pip 
+                 python -m pip install pytest
+            - name: Run tests
+              run: python -m pytest
