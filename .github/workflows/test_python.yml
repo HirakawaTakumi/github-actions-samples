@@ -12,6 +12,7 @@ on:
 jobs:
     python-test:
         runs-on: ubuntu-latest
+        timeout-minutes: 3 # タイムアウトは必ず設定する
         defaults:
             run:
                 working-directory: ./python/test_project
