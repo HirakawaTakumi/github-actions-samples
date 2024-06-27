@@ -1,6 +1,6 @@
 name: GITHUB_OUTPUT
 run-name: Run by @${{ github.actor }}
-on: push
+on: workflow_dispatch
 jobs:
     share:
         name: Share GITHUB_OUTPUT

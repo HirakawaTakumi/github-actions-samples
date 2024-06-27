@@ -1,5 +1,5 @@
 name: Context-workflow-actor
-on: push
+on: workflow_dispatch
 jobs:
     print:
         runs-on: ubuntu-latest

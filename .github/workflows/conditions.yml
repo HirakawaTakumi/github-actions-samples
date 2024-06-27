@@ -1,5 +1,5 @@
 name: Conditions
-on: push
+on: workflow_dispatch
 jobs:
     condition:
         runs-on: ubuntu-latest

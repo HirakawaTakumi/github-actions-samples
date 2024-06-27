@@ -1,0 +1,11 @@
+name: Intermediate environment variables
+on: workflow_dispatch
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        env:
+            ACTOR: ${{ github.actor }}
+        # 中間変数を定義することで以下の点で利点がある
+        # コンテキストに特殊文字が含まれてシェルコマンドの実行に意図しない影響を与えることを防ぐ   
+        steps:
+            - run: echo "${ACTOR}"
